@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>[SEU NOME] — Portfólio Criativo & Desenvolvedor Web</title>
+    <meta name="title" content="[SEU NOME] — Portfólio Criativo & Desenvolvedor Web" />
+    <meta name="description" content="Portfólio pessoal moderno e interativo de [SEU NOME], explorando desenvolvimento web criativo, tipografia dinâmica, microinterações e design de interfaces." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Acessibilidade: Skip to main content -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Custom Cursor (Desktop) -->
+    <div class="custom-cursor" id="cursor-dot" aria-hidden="true"></div>
+    <div class="custom-cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+    <!-- Ambient background gradient -->
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="ambient-grid" aria-hidden="true"></div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header" id="site-header">
+      <div class="header-inner container">
+        <a href="#hero" class="brand-logo" aria-label="Ir para o início">
+          <span class="logo-symbol">✦</span>
+          <span class="logo-text">[SEU NOME]</span>
+          <span class="logo-tag">DEV</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#sobre" class="nav-link" data-nav="sobre">
+                <span class="nav-num">01.</span> Sobre mim
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#projetos" class="nav-link" data-nav="projetos">
+                <span class="nav-num">02.</span> Projetos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contato" class="nav-link" data-nav="contato">
+                <span class="nav-num">03.</span> Contato
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions: Theme toggle & CTA -->
+        <div class="header-actions">
+          <div class="status-indicator desktop-only" title="Status profissional">
+            <span class="status-dot"></span>
+            <span class="status-text">Disponível</span>
+          </div>
+
+          <!-- Theme toggle button -->
+          <button 
+            type="button" 
+            class="theme-toggle-btn" 
+            id="theme-toggle" 
+            aria-label="Alternar entre modo claro e escuro" 
+            title="Alternar tema">
+            <span class="theme-icon icon-sun" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+            </span>
+            <span class="theme-icon icon-moon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+              </svg>
+            </span>
+          </button>
+
+          <!-- Mobile Menu Hamburger Button -->
+          <button 
+            type="button" 
+            class="mobile-menu-btn" 
+            id="mobile-menu-toggle" 
+            aria-expanded="false" 
+            aria-controls="mobile-menu" 
+            aria-label="Abrir menu de navegação">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu-drawer" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+          <span class="mobile-menu-title">// NAVEGAÇÃO</span>
+          <button type="button" class="mobile-menu-close" id="mobile-menu-close" aria-label="Fechar menu">✕</button>
+        </div>
+        <nav class="mobile-nav">
+          <ul class="mobile-nav-list">
+            <li><a href="#hero" class="mobile-nav-link" data-mobile-nav="hero">Início</a></li>
+            <li><a href="#sobre" class="mobile-nav-link" data-mobile-nav="sobre"><span class="nav-num">01.</span> Sobre mim</a></li>
+            <li><a href="#projetos" class="mobile-nav-link" data-mobile-nav="projetos"><span class="nav-num">02.</span> Projetos</a></li>
+            <li><a href="#contato" class="mobile-nav-link" data-mobile-nav="contato"><span class="nav-num">03.</span> Contato</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span class="status-text">Disponível para projetos</span>
+          </div>
+          <div class="mobile-socials">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-chip">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-chip">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+      <!-- ============================================ -->
+      <!-- SECTION: HERO (Apresentação de Destaque)     -->
+      <!-- ============================================ -->
+      <section class="section hero-section" id="hero">
+        <div class="container hero-container">
+          <div class="hero-header-meta">
+            <div class="hero-badge">
+              <span class="pulse-ring"></span>
+              <span class="hero-badge-text">DESENVOLVEDOR CRIATIVO // [SUA CIDADE OU REMOTO]</span>
+            </div>
+            <div class="hero-coords font-mono">LAT 23.5505° S / LON 46.6333° W</div>
+          </div>
+
+          <div class="hero-main-title">
+            <h1 class="hero-name">
+              <span class="hero-name-line">
+                <span class="hero-name-accent">[SEU</span> 
+                <span>NOME]</span>
+              </span>
+            </h1>
+            <p class="hero-tagline">
+              Desenvolvedor focado em criar 
+              <span class="interactive-word" data-word="experiências" data-tooltip="Design centrado no usuário e navegação intuitiva">experiências digitais</span> 
+              que unem 
+              <span class="interactive-word" data-word="código" data-tooltip="Clean code, performance e padrões modernos de engenharia">código limpo</span>, 
+              <span class="interactive-word" data-word="tipografia" data-tooltip="Hierarquia editorial inspirada na vanguarda do design suíço">tipografia expressiva</span> e 
+              <span class="interactive-word" data-word="interatividade" data-tooltip="Microinterações táteis e efeitos sensoriais envolventes">interatividade refinada</span>.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary" id="btn-explore-projects">
+              <span>Explorar Projetos</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+              </svg>
+            </a>
+            <a href="#contato" class="btn btn-outline" id="btn-contact-hero">
+              <span>Vamos Conversar</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Lusion Labs Lens Reveal Showcase -->
+          <div class="lens-showcase-wrapper" id="lens-showcase" role="region" aria-label="Demonstração visual interativa inspirada em Lusion Labs">
+            <div class="lens-showcase-bar">
+              <div class="showcase-indicator">
+                <span class="mac-dot red"></span>
+                <span class="mac-dot yellow"></span>
+                <span class="mac-dot green"></span>
+              </div>
+              <div class="showcase-title font-mono">
+                <span class="lens-icon">◉</span> LUSION_LENS_REVEAL.SYS // PASSE O CURSOR OU TOQUE
+              </div>
+              <div class="showcase-lens-status font-mono" id="lens-coords">LENS: ACTIVE [X: 50% Y: 50%]</div>
+            </div>
+
+            <div class="lens-stage" id="lens-stage">
+              <!-- Base Layer: Grayscale / Monochromatic Blueprint -->
+              <div class="lens-layer lens-base" aria-hidden="true">
+                <img src="/images/hero-lens.jpg" alt="" class="lens-img lens-img-mono" />
+                <div class="lens-blueprint-overlay">
+                  <div class="blueprint-grid"></div>
+                  <div class="blueprint-hud">
+                    <span class="hud-item top-left font-mono">SYS.MONO_MODE // 001</span>
+                    <span class="hud-item top-right font-mono">ISO 100 // F1.8</span>
+                    <span class="hud-item bottom-left font-mono">RGB_CHANNELS: FILTERED</span>
+                    <span class="hud-item bottom-right font-mono">INTERACT TO REVEAL ➔</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Top Layer: Vivid Color Revealed by Lens Spotlight -->
+              <div class="lens-layer lens-reveal" id="lens-reveal-layer" aria-hidden="true">
+                <img src="/images/hero-lens.jpg" alt="" class="lens-img lens-img-color" />
+                <div class="lens-vivid-overlay"></div>
+              </div>
+
+              <!-- Lens Circular Ring Overlay Element -->
+              <div class="lens-cursor-ring" id="lens-cursor-ring" aria-hidden="true">
+                <span class="ring-label font-mono">LENS // REVEAL</span>
+                <span class="ring-crosshair horizontal"></span>
+                <span class="ring-crosshair vertical"></span>
+              </div>
+            </div>
+
+            <div class="lens-caption">
+              <p class="caption-text font-mono">
+                ✦ <strong>Efeito de Revelação por Lente:</strong> Passe o cursor sobre o quadro acima para revelar as cores, reflexos e profundidade da obra monocromática. Em dispositivos touch, arraste seu dedo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SECTION: SOBRE MIM (About Me)                -->
+      <!-- ============================================ -->
+      <section class="section sobre-section" id="sobre">
+        <div class="container">
+          <div class="section-label-wrapper">
+            <span class="section-num font-mono">// 01</span>
+            <h2 class="section-title">Sobre Mim</h2>
+            <span class="section-line"></span>
+          </div>
+
+          <div class="sobre-grid">
+            <div class="sobre-intro-col">
+              <!-- Typographic scroll animation container inspired by bleibtgleich.dev -->
+              <div class="scroll-reveal-text" id="sobre-text-reveal">
+                <p class="lead-text scroll-line">
+                  Olá! Sou <strong class="text-highlight">[SEU NOME]</strong>, um desenvolvedor movido pela paixão de construir interfaces digitais que combinam rigor técnico e sensibilidade estética.
+                </p>
+                <p class="body-text scroll-line">
+                  Com formação em <span class="interactive-word" data-word="formacao" data-tooltip="Substitua pelo seu curso ou área de estudo">[SUA FORMAÇÃO]</span> e atuação focada em <span class="interactive-word" data-word="frontend" data-tooltip="Aplicações web modernas, performance e UI reativa">desenvolvimento frontend</span>, transformo conceitos complexos em experiências fluídas, leves e acessíveis.
+                </p>
+                <p class="body-text scroll-line">
+                  Acredito que os melhores produtos nascem na interseção entre <span class="interactive-word" data-word="engenharia" data-tooltip="Arquitetura de software robusta e manutenível">engenharia consistente</span>, <span class="interactive-word" data-word="tipografia" data-tooltip="Ritmo de leitura e clareza de comunicação visual">tipografia consciente</span> e <span class="interactive-word" data-word="animacoes" data-tooltip="Animações propositais que orientam o olhar do usuário">movimento expressivo</span>. Quando não estou codificando, gosto de me aprofundar em <span class="interactive-word" data-word="interesses" data-tooltip="Ex.: design generativo, música, fotografia ou open-source">[SEUS INTERESSES PESSOAIS]</span>.
+                </p>
+              </div>
+
+              <!-- Quick Metrics / Stats Strip -->
+              <div class="metrics-strip">
+                <div class="metric-item">
+                  <span class="metric-value font-mono" data-target="05">05+</span>
+                  <span class="metric-label">[ANOS DE EXPERIÊNCIA]</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-value font-mono" data-target="24">24+</span>
+                  <span class="metric-label">[PROJETOS CRIADOS]</span>
+                </div>
+                <div class="metric-item">
+                  <span class="metric-value font-mono" data-target="100">100%</span>
+                  <span class="metric-label">[FOCO EM QUALIDADE]</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills & Competencies Column -->
+            <div class="sobre-skills-col">
+              <div class="skills-card">
+                <div class="skills-card-header">
+                  <span class="skills-category-badge font-mono">01 // DOMÍNIO TÉCNICO</span>
+                  <h3 class="skills-card-title">Habilidades & Especialidades</h3>
+                </div>
+
+                <div class="skills-group">
+                  <h4 class="skills-group-title font-mono">DESENVOLVIMENTO FRONTEND</h4>
+                  <div class="skills-tags">
+                    <span class="tech-tag" data-tooltip="Estrutura semântica e acessibilidade WCAG">HTML5 Semântico</span>
+                    <span class="tech-tag" data-tooltip="CSS Moderno, Flexbox, CSS Grid, Animações e Tokens">CSS3 Avançado</span>
+                    <span class="tech-tag" data-tooltip="ESNext, Módulos, DOM API e Async/Await">JavaScript Moderno</span>
+                    <span class="tech-tag" data-tooltip="Manipulação de pixels, animações e efeitos óticos">HTML5 Canvas 2D</span>
+                    <span class="tech-tag" data-tooltip="Design responsivo para múltiplos dispositivos">Responsive Design</span>
+                    <span class="tech-tag" data-tooltip="Frameworks reativos modernos e ferramentas">[SEU FRAMEWORK FAVORITO]</span>
+                  </div>
+                </div>
+
+                <div class="skills-group">
+                  <h4 class="skills-group-title font-mono">DESIGN DE EXPERIÊNCIA & UI</h4>
+                  <div class="skills-tags">
+                    <span class="tech-tag" data-tooltip="Design systems escaláveis e consistentes">Design Systems</span>
+                    <span class="tech-tag" data-tooltip="Transições com timing harmônico e propósito">Microinterações</span>
+                    <span class="tech-tag" data-tooltip="Contraste, navegação por teclado e leitores de tela">Acessibilidade Digital</span>
+                    <span class="tech-tag" data-tooltip="Escalas modulares e hierarquia de leitura">Tipografia Digital</span>
+                    <span class="tech-tag" data-tooltip="Prototipagem ágil e interfaces funcionais">Prototipação UI</span>
+                  </div>
+                </div>
+
+                <div class="skills-group">
+                  <h4 class="skills-group-title font-mono">METODOLOGIAS & ENGENHARIA</h4>
+                  <div class="skills-tags">
+                    <span class="tech-tag">Git & Versionamento</span>
+                    <span class="tech-tag">Performance Web (Core Web Vitals)</span>
+                    <span class="tech-tag">SEO Técnico</span>
+                    <span class="tech-tag">Clean Code</span>
+                  </div>
+                </div>
+
+                <div class="career-goal-box">
+                  <span class="goal-label font-mono">OBJETIVO PROFISSIONAL:</span>
+                  <p class="goal-text">
+                    [Substitua por seu objetivo profissional: Atuar no desenvolvimento de produtos digitais desafiadores, interfaces inovadoras ou colaborar com equipes multidisciplinares em projetos de alto impacto visual e técnico.]
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SECTION: PROJETOS (Interactive Gallery)      -->
+      <!-- ============================================ -->
+      <section class="section projetos-section" id="projetos">
+        <div class="container">
+          <div class="section-label-wrapper">
+            <span class="section-num font-mono">// 02</span>
+            <h2 class="section-title">Projetos Selecionados</h2>
+            <span class="section-line"></span>
+          </div>
+
+          <p class="section-subtitle">
+            Uma seleção de criações conceituais e aplicações com ênfase em design de interface, interatividade avançada e código modular.
+          </p>
+
+          <!-- Filter Pills -->
+          <div class="project-filters" role="tablist" aria-label="Filtro de projetos">
+            <button type="button" class="filter-pill active" data-filter="all" role="tab" aria-selected="true">Todos (03)</button>
+            <button type="button" class="filter-pill" data-filter="interactive" role="tab" aria-selected="false">Interativo & Canvas</button>
+            <button type="button" class="filter-pill" data-filter="design-system" role="tab" aria-selected="false">Design Systems</button>
+            <button type="button" class="filter-pill" data-filter="creative-code" role="tab" aria-selected="false">Creative Coding</button>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="projects-grid" id="projects-grid">
+            <!-- Project 1: Aura Lens -->
+            <article class="project-card" data-category="interactive" data-project-id="1">
+              <div class="project-card-inner">
+                <div class="project-visual-wrapper">
+                  <img src="/images/project-1.jpg" alt="Interface Chromatic Node do projeto Aura Lens" class="project-image" loading="lazy" />
+                  <div class="project-overlay">
+                    <span class="project-view-badge">Ver Detalhes ↗</span>
+                  </div>
+                  <div class="project-index-tag font-mono">01 // INTERACTIVE</div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="project-tag">HTML5 Canvas</span>
+                    <span class="project-tag">Refração Ótica</span>
+                    <span class="project-tag">UI Experimental</span>
+                  </div>
+                  <h3 class="project-title">Aura Lens — Experiência Ótica Interativa</h3>
+                  <p class="project-desc">
+                    Experimento visual focado em simular lentes cromáticas e dispersão de luz em tempo real na web, utilizando matemática vetorial e renderização acelerada.
+                  </p>
+                  <div class="project-card-footer">
+                    <button type="button" class="project-link-btn" data-open-modal="1" aria-label="Ver detalhes de Aura Lens">
+                      <span>Ver Estudo de Caso</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Nexus Design System -->
+            <article class="project-card" data-category="design-system" data-project-id="2">
+              <div class="project-card-inner">
+                <div class="project-visual-wrapper">
+                  <img src="/images/project-2.jpg" alt="Dashboard do Nexus Design System" class="project-image" loading="lazy" />
+                  <div class="project-overlay">
+                    <span class="project-view-badge">Ver Detalhes ↗</span>
+                  </div>
+                  <div class="project-index-tag font-mono">02 // DESIGN SYSTEM</div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="project-tag">Tokens Semânticos</span>
+                    <span class="project-tag">Acessibilidade WCAG</span>
+                    <span class="project-tag">UI Architecture</span>
+                  </div>
+                  <h3 class="project-title">Nexus System — Arquitetura de Design</h3>
+                  <p class="project-desc">
+                    Sistema de componentes escalável e biblioteca de tokens para dashboards de alta densidade de dados, com suporte a temas dinâmicos e contraste estrito.
+                  </p>
+                  <div class="project-card-footer">
+                    <button type="button" class="project-link-btn" data-open-modal="2" aria-label="Ver detalhes de Nexus System">
+                      <span>Ver Estudo de Caso</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: Hyperion 3D -->
+            <article class="project-card" data-category="creative-code" data-project-id="3">
+              <div class="project-card-inner">
+                <div class="project-visual-wrapper">
+                  <img src="/images/project-3.jpg" alt="Visualização topográfica 3D em wireframe do projeto Hyperion" class="project-image" loading="lazy" />
+                  <div class="project-overlay">
+                    <span class="project-view-badge">Ver Detalhes ↗</span>
+                  </div>
+                  <div class="project-index-tag font-mono">03 // CREATIVE CODE</div>
+                </div>
+                <div class="project-info">
+                  <div class="project-tags">
+                    <span class="project-tag">WebGL / Shaders</span>
+                    <span class="project-tag">Malha Generativa</span>
+                    <span class="project-tag">Data Visual</span>
+                  </div>
+                  <h3 class="project-title">Hyperion — Topografia Digital Generativa</h3>
+                  <p class="project-desc">
+                    Exploração de relevos tridimensionais procedurais renderizados via shaders matemáticos com manipulação interativa de luzes, rotação e elevação.
+                  </p>
+                  <div class="project-card-footer">
+                    <button type="button" class="project-link-btn" data-open-modal="3" aria-label="Ver detalhes de Hyperion">
+                      <span>Ver Estudo de Caso</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SECTION: CONTATO (Contact & Socials)        -->
+      <!-- ============================================ -->
+      <section class="section contato-section" id="contato">
+        <div class="container">
+          <div class="section-label-wrapper">
+            <span class="section-num font-mono">// 03</span>
+            <h2 class="section-title">Iniciar Conversa</h2>
+            <span class="section-line"></span>
+          </div>
+
+          <div class="contato-grid">
+            <!-- Left Column: Direct Info & Socials -->
+            <div class="contato-info-col">
+              <h3 class="contato-heading">
+                Tem uma ideia, proposta de projeto ou deseja colaborar?
+              </h3>
+              <p class="contato-lead">
+                Estou sempre aberto a conversar sobre novos projetos, oportunidades profissionais e criações no ecossistema web moderno.
+              </p>
+
+              <!-- Direct Email Box with 1-click copy -->
+              <div class="direct-email-box">
+                <span class="direct-email-label font-mono">E-MAIL DIRETO</span>
+                <div class="direct-email-row">
+                  <a href="mailto:contato@seudominio.com" class="direct-email-link" id="email-address-text">
+                    contato@seudominio.com
+                  </a>
+                  <button type="button" class="copy-email-btn" id="copy-email-btn" aria-label="Copiar endereço de e-mail">
+                    <span class="copy-text">Copiar</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="copy-feedback-toast" id="copy-toast" role="status" aria-live="polite">
+                  ✓ E-mail copiado para a área de transferência!
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="social-links-block">
+                <span class="social-block-title font-mono">REDES PROFISSIONAIS</span>
+                <ul class="social-list">
+                  <li>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-item-link">
+                      <span class="social-name">GitHub</span>
+                      <span class="social-handle font-mono">github.com/[seu-user]</span>
+                      <span class="social-arrow">↗</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-item-link">
+                      <span class="social-name">LinkedIn</span>
+                      <span class="social-handle font-mono">linkedin.com/in/[seu-perfil]</span>
+                      <span class="social-arrow">↗</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-item-link">
+                      <span class="social-name">X (Twitter)</span>
+                      <span class="social-handle font-mono">@[seu-handle]</span>
+                      <span class="social-arrow">↗</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="availability-card">
+                <span class="avail-badge font-mono">STATUS ATUAL</span>
+                <p class="avail-text">
+                  🟢 <strong>Aceitando propostas:</strong> Projetos freelance seletos, posições full-time e consultorias técnicas de frontend.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right Column: Validated Contact Form -->
+            <div class="contato-form-col">
+              <div class="form-wrapper-card">
+                <div class="form-header">
+                  <h4 class="form-title">Envie uma Mensagem</h4>
+                  <p class="form-desc">Preencha os campos abaixo. Todos os dados são validados antes do envio.</p>
+                </div>
+
+                <form class="contact-form" id="contact-form" novalidate>
+                  <!-- Nome -->
+                  <div class="form-group" id="group-name">
+                    <label for="contact-name" class="form-label">
+                      Seu Nome <span class="required-star">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="contact-name" 
+                      name="name" 
+                      class="form-input" 
+                      placeholder="Ex.: Ana Oliveira" 
+                      required 
+                      minlength="2"
+                      autocomplete="name"
+                      aria-describedby="name-error"
+                    />
+                    <span class="field-error-msg font-mono" id="name-error" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="form-group" id="group-email">
+                    <label for="contact-email" class="form-label">
+                      Seu E-mail <span class="required-star">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      id="contact-email" 
+                      name="email" 
+                      class="form-input" 
+                      placeholder="nome@exemplo.com" 
+                      required 
+                      autocomplete="email"
+                      aria-describedby="email-error"
+                    />
+                    <span class="field-error-msg font-mono" id="email-error" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <!-- Assunto -->
+                  <div class="form-group" id="group-subject">
+                    <label for="contact-subject" class="form-label">
+                      Assunto <span class="required-star">*</span>
+                    </label>
+                    <select id="contact-subject" name="subject" class="form-select" required aria-describedby="subject-error">
+                      <option value="">Selecione um assunto...</option>
+                      <option value="projeto">Novo Projeto / Freelance</option>
+                      <option value="oportunidade">Oportunidade Profissional</option>
+                      <option value="consultoria">Consultoria Técnica</option>
+                      <option value="outro">Outro assunto</option>
+                    </select>
+                    <span class="field-error-msg font-mono" id="subject-error" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <!-- Mensagem -->
+                  <div class="form-group" id="group-message">
+                    <div class="label-with-counter">
+                      <label for="contact-message" class="form-label">
+                        Sua Mensagem <span class="required-star">*</span>
+                      </label>
+                      <span class="char-counter font-mono" id="message-char-counter">0 / 500</span>
+                    </div>
+                    <textarea 
+                      id="contact-message" 
+                      name="message" 
+                      rows="5" 
+                      class="form-textarea" 
+                      placeholder="Descreva seu projeto, prazos ou perguntas..." 
+                      required 
+                      minlength="15"
+                      maxlength="500"
+                      aria-describedby="message-error"
+                    ></textarea>
+                    <span class="field-error-msg font-mono" id="message-error" role="alert" aria-live="polite"></span>
+                  </div>
+
+                  <!-- Submit Button & State -->
+                  <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                      <span class="btn-text">Enviar Mensagem</span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Real feedback area (No fake submission) -->
+                  <div class="form-status-banner" id="form-status-banner" role="status" aria-live="polite"></div>
+                </form>
+
+                <div class="form-integration-note font-mono">
+                  ✦ <strong>Integração real:</strong> O formulário conta com validação estrita no cliente. Para receber mensagens no seu e-mail pessoal, basta vincular o endpoint do <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">Formspree</a> ou seu webhook favorito no atributo <code>action</code> do formulário.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Project Detail Modal -->
+    <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title" aria-hidden="true">
+      <div class="modal-backdrop" id="modal-backdrop"></div>
+      <div class="modal-card">
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Fechar janela de detalhes">✕</button>
+        <div class="modal-content" id="modal-content-body">
+          <!-- Populated dynamically by projects.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Interactive Tooltip for NOTH.IN words -->
+    <div class="floating-word-tooltip" id="word-tooltip" aria-hidden="true"></div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-left">
+          <span class="footer-brand font-mono">[SEU NOME] © 2026</span>
+          <span class="footer-subtext">Construído com Vanilla CSS, JavaScript e rigor visual.</span>
+        </div>
+        <div class="footer-center">
+          <span class="footer-ticker font-mono">
+            <span class="ticker-pulse"></span> LOCAL TIME: <span id="footer-clock">--:--:--</span>
+          </span>
+        </div>
+        <div class="footer-right">
+          <a href="#hero" class="back-to-top font-mono" id="back-to-top">
+            VOLTAR AO TOPO ↑
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main Module Entry Point -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
